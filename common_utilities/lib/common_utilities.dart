@@ -1,13 +1,7 @@
 library common_utilities;
-import 'package:common_utilities/src/StringUtils.dart';
 
 
-extension StringUtil on String {
+export 'src/extensions.dart';
 
-  CommonStringUtils StringUtils (){
-    var instance = CommonStringUtils.stringUtils;
-    instance.construct(this);
-    return instance;
-  }
 
-}
+

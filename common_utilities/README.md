@@ -4,7 +4,7 @@ A Dart Common Utility Package . That contain useful functions for different clas
 
 Includes a set of **String** , **Int** , **List** functions and so on. that make your work much faster and easier.
 
-**version 0.0.3  Includes only String utils**.
+**version 0.0.4  Includes only String utils**.
 
 ## String Utils
 Includes over 30 useful string functions such as :

@@ -1,6 +1,6 @@
 name: common_utilities
 description: A Dart Common Utility Package .
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/m-r-davari/Flutter-Packages
 
 environment:
