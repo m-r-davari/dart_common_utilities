@@ -1,5 +1,6 @@
+import 'dart:math';
 import 'package:intl/intl.dart';
-import 'dart:convert' show utf8, base64;
+import 'dart:convert' show base64, base64UrlEncode, utf8;
 
 class CommonStringUtils {
   static final String _exceptionTag = 'Exception on StringUtils : ';
@@ -8,10 +9,12 @@ class CommonStringUtils {
 
   CommonStringUtils._();
 
+  /// Set a string value to [_mainStr] as the variable that should process.
   void construct(String mainStr) {
     this._mainStr = mainStr;
   }
 
+  /// make a sub-string of given string by deleting [startStr] and [endStr].
   String subStringBetween(String startStr, String endStr) {
     String result = '';
     try {
@@ -25,6 +28,7 @@ class CommonStringUtils {
     return result;
   }
 
+  /// make a [List<String>] of given string by deleting [startStr] and [endStr].
   List<String> subStringsBetween(String startStr, String endStr) {
     List<String> results = [];
     _mainStr.split('$endStr').forEach((element) {
@@ -36,6 +40,7 @@ class CommonStringUtils {
     return results;
   }
 
+  /// find [targetStr] in given string and return the sub-string after it.
   String subStringAfter(String targetStr, [bool lastIndex = false]) {
     String result = '';
     try {
@@ -51,6 +56,7 @@ class CommonStringUtils {
     return result;
   }
 
+  /// find [targetStr] in given string and return the sub-string before it.
   String subStringBefore(String targetStr, [bool lastIndex = false]) {
     String result = '';
     try {
@@ -63,35 +69,45 @@ class CommonStringUtils {
     return result;
   }
 
+  /// add [wordStr] in [index] of the given string.
   String insertAt(int index, String wordStr) {
     var selectStr = _mainStr[index];
     return _mainStr.replaceFirst('$selectStr', '$selectStr' + '$wordStr');
   }
 
+  /// remove the character in [index] of the given string.
   String removeAt(int index) {
     var selectStr = _mainStr[index];
     return _mainStr.replaceFirst('$selectStr', '');
   }
 
+  /// find the first [targetStr] in the given string and add the [word] to it.
+  /// then return the result as string
   String insertAfter(String targetStr, String word) {
     return _mainStr.replaceFirst('$targetStr', '$targetStr' + '$word');
   }
 
+  /// find every [targetStr] in the given string and add the [word] to it.
+  /// then return the result as string
   String insertAfterEvery(String targetStr, String word) {
     return _mainStr.replaceAll('$targetStr', '$targetStr' + '$word');
   }
 
+  /// find all the characters after [targetStr] and remove them from the given string.
   String removeAfter(String targetStr) {
     var tempTarget =
         _mainStr.substring(_mainStr.indexOf('$targetStr') + targetStr.length);
     return _mainStr.replaceFirst('$tempTarget', '');
   }
 
+  /// find all the characters before [targetStr] and remove them from the given string.
   String removeBefore(String targetStr) {
     var tempTarget = _mainStr.substring(0, _mainStr.indexOf('$targetStr'));
     return _mainStr.replaceFirst('$tempTarget', '');
   }
 
+  /// return true if the string is castable to [int] type,
+  /// if it's not, return false.
   bool isNumericInt() {
     final validCharacters = RegExp(r'^[0-9]+$');
 
@@ -102,6 +118,8 @@ class CommonStringUtils {
     }
   }
 
+  /// return true if the string is castable to [double] type,
+  /// if it's not, return false.
   bool isNumericDouble() {
     if (_mainStr.isEmpty) {
       return false;
@@ -109,6 +127,8 @@ class CommonStringUtils {
     return double.tryParse(_mainStr) != null;
   }
 
+  /// return true if all the characters of the given string is alphabetic characters,
+  /// if it's not, return false.
   bool isAlphabetic(bool withSpace) {
     final validCharacters =
         withSpace ? RegExp(r'^[a-zA-Z ]+$') : RegExp(r'^[a-zA-Z]+$');
@@ -120,6 +140,8 @@ class CommonStringUtils {
     }
   }
 
+  /// return true if all the characters of the given string is uppercase,
+  /// if it's not, return false.
   bool isUpperCase() {
     final validCharacters = _mainStr.toUpperCase();
     if (_mainStr == validCharacters &&
@@ -130,6 +152,8 @@ class CommonStringUtils {
     }
   }
 
+  /// return true if all the characters of the given string is combination of alphabetic and numeric characters,
+  /// if it's not, return false.
   bool isAlphaNumeric(bool withSpace) {
     final validCharacters =
         withSpace ? RegExp(r'^[a-zA-Z0-9 ]+$') : RegExp(r'^[a-zA-Z0-9]+$');
@@ -141,6 +165,8 @@ class CommonStringUtils {
     }
   }
 
+  /// return true if the given string is blank
+  /// if it's not, return false.
   bool isBlank() {
     final validCharacters = RegExp(r'^[ ]+$');
 
@@ -151,6 +177,8 @@ class CommonStringUtils {
     }
   }
 
+  /// return true if all the characters of the given string contains special characters,
+  /// if it's not, return false.
   bool isContainSpecialChar() {
     final validCharacters = RegExp(r'^[a-zA-Z0-9 ]+$');
 
@@ -161,6 +189,8 @@ class CommonStringUtils {
     }
   }
 
+  /// return true if all the characters of the given string is valid characters,
+  /// if it's not, return false.
   bool isValidCharacters(RegExp validCharacters) {
     try {
       if (validCharacters.hasMatch(_mainStr)) {
@@ -174,6 +204,8 @@ class CommonStringUtils {
     }
   }
 
+  /// convert all the english numbers to persian in the given string,
+  /// then return the result.
   String convertEnglishNumberToPersian() {
     const english = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
     const farsi = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
@@ -184,6 +216,8 @@ class CommonStringUtils {
     return _mainStr;
   }
 
+  /// convert all the persian numbers to english in the given string,
+  /// then return the result.
   String convertPersianNumberToEnglish() {
     const english = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
     const farsi = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
@@ -194,6 +228,8 @@ class CommonStringUtils {
     return _mainStr;
   }
 
+  /// add comma character to the given string to make the money format,
+  /// then return the result string.
   String convertToMoneyFormat() {
     final formatter = new NumberFormat("#,###", "en_US");
     if (isNumericDouble()) {
@@ -206,30 +242,37 @@ class CommonStringUtils {
     }
   }
 
+  /// return the characters count of the given string
   int countWords(String wordStr) {
     int wordCount = 0;
     wordCount = '$wordStr'.allMatches('$_mainStr').length;
     return wordCount;
   }
 
+  /// return the lines count of the given string
   int countLines() {
     int lineCount = 0;
     lineCount = '\n'.allMatches('$_mainStr').length;
     return lineCount + 1;
   }
 
+  /// reverse string from the end to the start
   String reverse() {
     return _mainStr.split('').reversed.join();
   }
 
+  /// reverse the words of the given string
   String reverseWords() {
     return _mainStr.split(' ').reversed.join(' ');
   }
 
+  /// remove the blank lines from the given string,
+  /// the return the result string.
   String removeBlankLines() {
     return _mainStr.replaceAll(new RegExp(r'(?:[\t ]*(?:\r?\n|\r))+'), '\n');
   }
 
+  /// remove the lines that contains [wordStr] from the given string.
   String removeLinesThatContain(String wordStr) {
     var lines = _mainStr.split('\n');
     for (var lineItem in _mainStr.split('\n')) {
@@ -240,6 +283,8 @@ class CommonStringUtils {
     return lines.join('\n');
   }
 
+  /// return true if the given string is valid Email,
+  /// if it's not, return false.
   bool isEmail() {
     var emailValidation = RegExp(
         r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$");
@@ -250,10 +295,14 @@ class CommonStringUtils {
     }
   }
 
+  /// convert the given string to [base64]
+  /// then return the result string.
   String convertToBase64() {
     return base64.encode(utf8.encode(_mainStr));
   }
 
+  /// convert the given [base64] to string
+  /// then return the result string.
   String convertBase64ToString() {
     return utf8.decode(base64.decode(_mainStr));
   }
@@ -262,7 +311,22 @@ class CommonStringUtils {
     return utf8.encode('$_mainStr');
   }
 
+  /// wrap the given string between the [wrapWith]
   String wrap(String wrapWith) {
     return '$wrapWith$_mainStr$wrapWith';
+  }
+
+  /// return true if the given string is valid URL,
+  /// if it's not, return false.
+  bool isValidUrl() {
+    if (_mainStr.isEmpty) return false;
+    return Uri.tryParse(_mainStr)?.hasAbsolutePath ?? false;
+  }
+
+  /// generate a secure random string
+  String getRandomString(int len) {
+    var random = Random.secure();
+    var values = List<int>.generate(len, (i) => random.nextInt(255));
+    return base64UrlEncode(values);
   }
 }

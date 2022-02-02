@@ -1,6 +1,8 @@
-## version 0.0.6
+## version 0.0.10
 * Support null-safety
 * Add wrap method
+* Add URL validation method
+* Add random string generator
 * Complete documentation
 
 ## version 0.0.5

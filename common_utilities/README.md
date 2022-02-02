@@ -4,7 +4,23 @@ A Dart Common Utility Package . That contain useful functions for different clas
 
 Includes a set of **String** , **Int** , **List** functions and so on. that make your work much faster and easier.
 
-**version 0.0.4  Includes only String utils**.
+**version 0.0.10  Includes only String utils**.
+
+## Usage
+
+add this line to your `pubspec.yaml` :
+
+```yaml
+    dependencies:
+      commmon_utilities: ^0.0.10
+```
+
+or enter this to your command line: 
+
+```yaml
+    flutter pub add common_utilities
+```
+
 
 ## String Utils
 Includes over 30 useful string functions such as :

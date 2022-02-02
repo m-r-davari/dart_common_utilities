@@ -1,6 +1,6 @@
 name: common_utilities
 description: A Dart common utility package, currently supports string processing methods that makes your code cleaner.
-version: 0.0.6
+version: 0.0.10
 homepage: https://github.com/m-r-davari/Flutter-Packages
 
 environment:
