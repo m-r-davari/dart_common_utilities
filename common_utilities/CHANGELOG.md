@@ -3,6 +3,9 @@
 * Add wrap method
 * Complete documentation
 
+## version 0.0.5
+* Fix reverse method.
+
 ## version 0.0.4
 * Fix StringUtils extension.
 
