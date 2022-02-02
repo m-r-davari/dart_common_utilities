@@ -58,6 +58,13 @@
             </list>
           </value>
         </entry>
+        <entry key="flutter_lints">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../../Programs/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-1.0.4/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="flutter_test">
           <value>
             <list>
@@ -68,7 +75,14 @@
         <entry key="intl">
           <value>
             <list>
-              <option value="$PROJECT_DIR$/../../../Programs/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.16.1/lib" />
+              <option value="$PROJECT_DIR$/../../../Programs/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="lints">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../../Programs/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/lints-1.0.1/lib" />
             </list>
           </value>
         </entry>
@@ -166,7 +180,9 @@
       <root url="file://$PROJECT_DIR$/../../../Programs/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/clock-1.1.0/lib" />
       <root url="file://$PROJECT_DIR$/../../../Programs/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.15.0/lib" />
       <root url="file://$PROJECT_DIR$/../../../Programs/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0/lib" />
-      <root url="file://$PROJECT_DIR$/../../../Programs/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.16.1/lib" />
+      <root url="file://$PROJECT_DIR$/../../../Programs/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-1.0.4/lib" />
+      <root url="file://$PROJECT_DIR$/../../../Programs/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../../Programs/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/lints-1.0.1/lib" />
       <root url="file://$PROJECT_DIR$/../../../Programs/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.11/lib" />
       <root url="file://$PROJECT_DIR$/../../../Programs/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/meta-1.7.0/lib" />
       <root url="file://$PROJECT_DIR$/../../../Programs/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.0/lib" />

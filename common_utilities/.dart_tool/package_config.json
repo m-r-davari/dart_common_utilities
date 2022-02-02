@@ -50,6 +50,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_lints",
+      "rootUri": "file:///D:/Programs/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-1.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///D:/Programs/Flutter/flutter/packages/flutter_test",
       "packageUri": "lib/",
@@ -57,9 +63,15 @@
     },
     {
       "name": "intl",
-      "rootUri": "file:///D:/Programs/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.16.1",
+      "rootUri": "file:///D:/Programs/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0",
       "packageUri": "lib/",
-      "languageVersion": "2.5"
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "lints",
+      "rootUri": "file:///D:/Programs/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/lints-1.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "matcher",
@@ -137,10 +149,10 @@
       "name": "common_utilities",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.7"
+      "languageVersion": "2.15"
     }
   ],
-  "generated": "2022-02-01T11:07:20.035873Z",
+  "generated": "2022-02-02T09:25:10.719696Z",
   "generator": "pub",
   "generatorVersion": "2.15.1"
 }

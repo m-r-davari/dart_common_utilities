@@ -13,7 +13,7 @@ class CommonStringUtils {
   }
 
   String subStringBetween(String startStr, String endStr) {
-    String result;
+    String result = '';
     try {
       final startIndex = _mainStr.indexOf(startStr);
       final endIndex = _mainStr.indexOf(endStr, startIndex + startStr.length);
@@ -28,7 +28,7 @@ class CommonStringUtils {
   List<String> subStringsBetween(String startStr, String endStr) {
     List<String> results = [];
     _mainStr.split('$endStr').forEach((element) {
-      if (element != null && element.isNotEmpty) {
+      if (element.isNotEmpty) {
         results.add(
             element.substring(element.indexOf('$startStr') + startStr.length));
       }
@@ -37,7 +37,7 @@ class CommonStringUtils {
   }
 
   String subStringAfter(String targetStr, [bool lastIndex = false]) {
-    String result;
+    String result = '';
     try {
       lastIndex
           ? result = _mainStr
@@ -52,7 +52,7 @@ class CommonStringUtils {
   }
 
   String subStringBefore(String targetStr, [bool lastIndex = false]) {
-    String result;
+    String result = '';
     try {
       lastIndex
           ? result = _mainStr.substring(0, _mainStr.lastIndexOf('$targetStr'))
@@ -103,7 +103,7 @@ class CommonStringUtils {
   }
 
   bool isNumericDouble() {
-    if (_mainStr == null) {
+    if (_mainStr.isEmpty) {
       return false;
     }
     return double.tryParse(_mainStr) != null;
@@ -170,7 +170,7 @@ class CommonStringUtils {
       }
     } catch (exc) {
       print('$_exceptionTag$exc');
-      return null;
+      return false;
     }
   }
 
@@ -202,7 +202,7 @@ class CommonStringUtils {
       }
       return formatter.format(double.parse(_mainStr));
     } else {
-      return null;
+      return _mainStr;
     }
   }
 
