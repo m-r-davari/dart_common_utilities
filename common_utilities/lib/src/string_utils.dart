@@ -261,4 +261,8 @@ class CommonStringUtils {
   List<int> convertToUTF8() {
     return utf8.encode('$_mainStr');
   }
+
+  String wrap(String wrapWith) {
+    return '$wrapWith$_mainStr$wrapWith';
+  }
 }
