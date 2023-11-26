@@ -1,3 +1,10 @@
+## v0.1.0
+
+### Features
+* Added Over 35 useful String utility functions.
+### Fixes
+* Fix structures and some bugs.
+
 ## version 0.0.10
 * Support null-safety
 * Add wrap method

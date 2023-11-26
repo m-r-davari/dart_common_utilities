@@ -1,6 +1,6 @@
 name: common_utilities
 description: A Dart language Common Utility package, that makes your code faster,easier and cleaner. contains lots of useful functions for Dart primitive types (support all Flutter platforms)
-version: 0.5.0
+version: 0.1.0
 homepage: https://github.com/m-r-davari/dart_common_utilities
 
 topics:
@@ -19,7 +19,7 @@ platforms:
   windows:
 
 environment:
-  sdk: ">=2.15.1 <3.0.0"
+  sdk: ">=2.15.1 <4.0.0"
   flutter: ">=1.17.0"
 
 dependencies:

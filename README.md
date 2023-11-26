@@ -14,7 +14,7 @@ A Dart language Common Utility package, that makes your code faster,easier and c
 - Add **Lists** (List) utility functions.
 
 ## Notes
-**version 0.5.0  Includes only String utils**.
+**version 0.1.0  Includes only String utils**.
 
 ## Usage
 
@@ -22,7 +22,7 @@ add this line to your `pubspec.yaml` :
 
 ```yaml
     dependencies:
-      common_utilities: ^0.5.0
+      common_utilities: ^0.1.0
 ```
 
 or enter this to your command line: 
