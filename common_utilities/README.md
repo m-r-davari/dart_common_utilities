@@ -4,7 +4,23 @@ A Dart Common Utility Package . That contain useful functions for different clas
 
 Includes a set of **String** , **Int** , **List** functions and so on. that make your work much faster and easier.
 
-**version 0.0.4  Includes only String utils**.
+**version 0.0.10  Includes only String utils**.
+
+## Usage
+
+add this line to your `pubspec.yaml` :
+
+```yaml
+    dependencies:
+      commmon_utilities: ^0.0.10
+```
+
+or enter this to your command line: 
+
+```yaml
+    flutter pub add common_utilities
+```
+
 
 ## String Utils
 Includes over 30 useful string functions such as :
@@ -55,18 +71,18 @@ void main() {
   
   String mainStr = 'If you want something you have never had you must do something you have never done';
 
-  String result  = mainStr.StringUtils().subStringBetween('want', 'never');
+  String result  = mainStr.stringUtils().subStringBetween('want', 'never');
   // prints =>  'something you have'
 
-  List<String> result2  = mainStr.StringUtils().subStringsBetween('you', 'never');
+  List<String> result2  = mainStr.stringUtils().subStringsBetween('you', 'never');
   // prints =>  ['something you have' , 'must do something you have']
 
   
-  String result3  = mainStr.StringUtils().subStringAfter('something');
+  String result3  = mainStr.stringUtils().subStringAfter('something');
   // prints =>  'you have never had you must do something you have never done'
 
   bool lastIndex = true; //This is optional & its false by default
-  String result4  = mainStr.StringUtils().subStringAfter('something',lastIndex);
+  String result4  = mainStr.stringUtils().subStringAfter('something',lastIndex);
   // prints =>  'you have never done'
   
 }
