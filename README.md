@@ -1,10 +1,20 @@
 # common_utilities
 
-A Dart Common Utility Package . That contain useful functions for different classes.
+A Dart language Common Utility package, that makes your code faster,easier and cleaner. contains lots of useful functions for Dart primitive types (support all Flutter platforms)
 
-Includes a set of **String** , **Int** , **List** functions and so on. that make your work much faster and easier.
+## Features
 
-**version 0.0.10  Includes only String utils**.
+- **String** : Over 35 useful String utility functions.
+
+
+## Todo (Next Versions)
+
+- Add **Numbers** (int, double, num, BigInt) utility functions.
+- Add **Booleans** (bool) utility functions.
+- Add **Lists** (List) utility functions.
+
+## Notes
+**version 0.5.0  Includes only String utils**.
 
 ## Usage
 
@@ -12,7 +22,7 @@ add this line to your `pubspec.yaml` :
 
 ```yaml
     dependencies:
-      common_utilities: ^0.0.10
+      common_utilities: ^0.5.0
 ```
 
 or enter this to your command line: 
@@ -26,40 +36,40 @@ or enter this to your command line:
 Includes over 30 useful string functions such as :
 
 1. subStringBetween
-1. subStringsBetween
-1. subStringBetween
-1. subStringsBetween
-1. subStringAfter
-1. subStringBefore
-1. subStringAfter
-1. subStringBefore
-1. insertAt
-1. removeAt
-1. insertAfter
-1. insertAfterEvery
-1. removeAfter
-1. removeBefore
-1. isNumericInt
-1. isNumericDouble
-1. isAlphabetic
-1. isUpperCase
-1. isAlphaNumeric
-1. isBlank
-1. isContainSpecialChar
-1. isValidCharacters
-1. convertEnglishNumberToPersian
-1. convertPersianNumberToEnglish
-1. convertToMoneyFormat
-1. countWords
-1. countLines
-1. reverse
-1. reverseWords
-1. removeBlankLines
-1. removeLinesThatContain
-1. isEmail
-1. convertToBase64
-1. convertBase64ToString
-1. convertToUTF8
+2. subStringsBetween
+3. subStringBetween
+4. subStringsBetween
+5. subStringAfter
+6. subStringBefore
+7. subStringAfter
+8. subStringBefore
+9. insertAt
+10. removeAt
+11. insertAfter
+12. insertAfterEvery
+13. removeAfter
+14. removeBefore
+15. isNumericInt
+16. isNumericDouble
+17. isAlphabetic
+18. isUpperCase
+19. isAlphaNumeric
+20. isBlank
+21. isContainSpecialChar
+22. isValidCharacters
+23. convertEnglishNumberToPersian
+24. convertPersianNumberToEnglish
+25. convertToMoneyFormat
+26. countWords
+27. countLines
+28. reverse
+29. reverseWords
+30. removeBlankLines
+31. removeLinesThatContain
+32. isEmail
+33. convertToBase64
+34. convertBase64ToString
+35. convertToUTF8
 
 ## How To Use
 ### Example for StringUtils :
@@ -89,6 +99,6 @@ void main() {
 }
 ```
 
-## Changelog
-
-Refer to the [Changelog](https://pub.dev/packages/common_utilities/changelog) to get all release notes.
+## More Info
+- This package is equivalent of Common Utils library in Java, by this package there is no more need to write utils functions, just add it to your project and enjoy.
+- Feel free to make pull request to add your desire functions if its not included in the package functions list.
