@@ -4,7 +4,7 @@ version: 0.1.0
 homepage: https://github.com/m-r-davari/dart_common_utilities
 
 topics:
-  - "common_utilities"
+  - "common-utilities"
   - "common-utils"
   - "string-utils"
   - "utils"
@@ -14,8 +14,6 @@ platforms:
   android:
   ios:
   web:
-  linux:
-  windows:
 
 environment:
   sdk: ">=2.15.1 <4.0.0"
