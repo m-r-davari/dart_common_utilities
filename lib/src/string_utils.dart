@@ -310,7 +310,7 @@ class CommonStringUtils {
     return utf8.encode('$_mainStr');
   }
 
-  /// wrap the given string between the [wrapWith]
+  /// wrap the given string between the [wrapWith].
   String wrap(String wrapWith) {
     return '$wrapWith$_mainStr$wrapWith';
   }
