@@ -4,7 +4,7 @@ A Dart language Common Utility package, that makes your code faster,easier and c
 
 ## Features
 
-- **String** : Over 35 useful String utility functions.
+- **String** : Over 30 useful String utility functions.
 
 
 ## Todo (Next Versions)
@@ -14,7 +14,7 @@ A Dart language Common Utility package, that makes your code faster,easier and c
 - Add **Lists** (List) utility functions.
 
 ## Notes
-**version 0.1.0  Includes only String utils**.
+**version 0.1.1  Includes only String utils**.
 
 ## Usage
 
@@ -22,7 +22,7 @@ add this line to your `pubspec.yaml` :
 
 ```yaml
     dependencies:
-      common_utilities: ^0.1.0
+      common_utilities: ^0.1.1
 ```
 
 or enter this to your command line: 
@@ -37,39 +37,37 @@ Includes over 30 useful string functions such as :
 
 1. subStringBetween
 2. subStringsBetween
-3. subStringBetween
-4. subStringsBetween
-5. subStringAfter
-6. subStringBefore
-7. subStringAfter
-8. subStringBefore
-9. insertAt
-10. removeAt
-11. insertAfter
-12. insertAfterEvery
-13. removeAfter
-14. removeBefore
-15. isNumericInt
-16. isNumericDouble
-17. isAlphabetic
-18. isUpperCase
-19. isAlphaNumeric
-20. isBlank
-21. isContainSpecialChar
-22. isValidCharacters
-23. convertEnglishNumberToPersian
-24. convertPersianNumberToEnglish
-25. convertToMoneyFormat
-26. countWords
-27. countLines
-28. reverse
-29. reverseWords
-30. removeBlankLines
-31. removeLinesThatContain
-32. isEmail
-33. convertToBase64
-34. convertBase64ToString
-35. convertToUTF8
+3. subStringAfter
+4. subStringBefore
+5. insertAt
+6. removeAt
+7. insertAfter
+8. insertAfterEvery
+9. removeAfter
+10. removeBefore
+11. isNumericInt
+12. isNumericDouble
+13. isAlphabetic
+14. isUpperCase
+15. isAlphaNumeric
+16. isBlank
+17. isContainSpecialChar
+18. isValidCharacters
+19. convertEnglishNumberToPersian
+20. convertPersianNumberToEnglish
+21. convertToMoneyFormat
+22. countWords
+23. countLines
+24. reverse
+25. reverseWords
+26. removeBlankLines
+27. removeLinesThatContain
+28. isEmail
+29. convertToBase64
+30. convertBase64ToString
+31. convertToUTF8
+32. wrap
+33. isValidUrl
 
 ## How To Use
 ### Example for StringUtils :
